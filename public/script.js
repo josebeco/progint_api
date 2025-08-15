@@ -1,10 +1,10 @@
-const API_URL = "http://localhost:3000";
+const API_URL = "http://localhost:3000/get";
 
 const cards = document.getElementById("cards");
 
 async function carregarAlunos() {
     try {
-        const response = await fetch(API_URL, { mode: 'no-cors'});
+        const response = await fetch(API_URL);
         console.log(response);
         if(!response.ok){
             console.log('aaaaa')
