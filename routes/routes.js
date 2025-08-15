@@ -4,6 +4,6 @@ import { getAllDados } from "../controllers/controller.js";
 const rota = Router();
 
 
-rota.get('/bd', getAllDados);
+rota.get('/', getAllDados);
 
 export default rota;
