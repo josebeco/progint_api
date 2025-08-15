@@ -1,15 +1,20 @@
 import express from "express";
 import dataRoutes from "./routes/routes.js";
+import path from 'path';
+import { fileURLToPath } from "url";
 
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 
-//Middleware para interpretar o JSON
+
 app.use(express.json());
 
-//Rota da API
+app.use(express.static(path.join(__dirname, 'public')))
+
 app.use('/', dataRoutes);
 
 app.listen(PORT, () => {
