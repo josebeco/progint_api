@@ -7,9 +7,9 @@ const sampleDados = [
     },
     {
         id: 2,
-        nome: "João Pedro Milani Câncer",
+        nome: "João Pedro ",
         idade: 3.5,
-        profissao: "Puliça"
+        profissao: "Arroz"
     }
 ]
 

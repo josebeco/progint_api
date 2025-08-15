@@ -4,9 +4,11 @@ const cards = document.getElementById("cards");
 
 async function carregarAlunos() {
     try {
-        const response = await fetch(API_URL);
+        const response = await fetch(API_URL, { mode: 'no-cors'});
+        console.log(response)
         const pessoas = await response.json();
         cards.innerHTML = "";
+       
 
         pessoas.forEach(pessoa => {
             const card = document.createElement("div");
